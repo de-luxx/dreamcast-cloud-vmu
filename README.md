@@ -134,6 +134,19 @@ sudo a2ensite vmu.conf
 sudo systemctl restart apache2
 ```
 
+### Disable the default Apache site
+
+```bash
+sudo a2dissite 000-default.conf
+sudo systemctl restart apache2
+```
+### Enable Apache's rewrite module
+
+```bash
+sudo a2enmod rewrite
+sudo systemctl restart apache2
+```
+
 ## 5. Set Up `dnsmasq` for `vmu.local`
 
 DreamPi already uses dnsmasq, so we just need to add a local entry.
